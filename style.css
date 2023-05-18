@@ -1,0 +1,135 @@
+:root{ 
+  /* Colors * /
+  /* Primary */
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+
+  /* Neutral */
+  
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+
+  /* font */
+  --font-family: 'Barlow Semi Condensed', sans-serif;
+}
+*{
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+body{
+  background-color: var(--light-grayish-blue);
+  font-family: var(--font-family);
+  min-height: 100vh;
+  display:flex ;
+  align-items: center;
+  justify-content: center;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 70px 20px 70px 20px;
+}
+.testimonial{
+  padding: 30px 30px 25px 30px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0px 10px 17px -2px rgba(215,226,238,1);
+}
+.testimonial p{
+  opacity: 50%;
+  font-weight: 500;
+  font-size: 12px;
+}
+.description p{
+  opacity: 55%;
+}
+.first_testimonial,.second_testimonial,.third_testimonial,.fourth_testimonial{
+  margin-bottom: 20px;
+}
+.third_testimonial,.fifth_testimonial{
+  background-color: var(--white);
+  color: var(--black);
+}
+.third_testimonial ,.fifth_testimonial {
+  background-color: var(--white);
+  color: var(--black);
+}
+.first_testimonial,.second_testimonial,.fourth_testimonial{
+  color: var(--white);
+}
+.first_testimonial{
+  background:var(--moderate-violet) url("images/bg-pattern-quotation.svg") no-repeat top right;
+}
+.second_testimonial{
+  background-color: var(--very-dark-grayish-blue);
+}
+.fourth_testimonial{
+  background-color: var(--very-dark-blackish-blue);
+}
+.profile{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.img img{
+  width: 32px;
+  border-radius: 50%;
+  
+  margin-right: 15px;
+}
+.first_testimonial_profile_img img{
+  border: 2px solid rgba(215,226,238,0.3);
+}
+.fourth_testimonial_profile_img img{
+  border: 2px solid var(--moderate-violet);
+}
+.description h2{
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+@media screen and (min-width: 1100px){
+  .main{
+    display: grid;
+    justify-content: center;
+    gap: 25px 25px;
+    grid-template-columns: repeat(4,250px);
+    grid-template-areas: 
+    "first first second fifth"
+    "third fourth fourth fifth"
+    ;
+  }
+  .first_testimonial,.second_testimonial,.third_testimonial,.fourth_testimonial{
+    margin-bottom: 0;
+  }
+  .first_testimonial{
+    grid-area: first;
+    background-position: top right 21%;
+  }
+  .second_testimonial{
+    grid-area: second;
+  }
+  .third_testimonial{
+    grid-area: third;
+    flex-grow: 1;
+  }
+  .fourth_testimonial{
+    grid-area: fourth;
+  }
+  .fifth_testimonial{
+    grid-area: fifth;
+    flex-grow: 1;
+  }
+  .fifth_testimonial_description h2{
+    margin-bottom: 30px;
+  }
+  .fifth_testimonial_description p{
+    line-height: 17px;
+  }
+}
