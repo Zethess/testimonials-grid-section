@@ -42,13 +42,18 @@ body{
   text-align: left;
   box-shadow: 0px 10px 17px -2px rgba(215,226,238,1);
 }
+.first_testimonial_profile_text p, .second_testimonial_profile_text p, .fourth_testimonial_profile_text p{
+  opacity: 70%;
+}
+.text p{
+  color: var(--light-gray);
+}
 .testimonial p{
-  opacity: 50%;
   font-weight: 500;
   font-size: 12px;
 }
 .description p{
-  opacity: 55%;
+  opacity: 70%;
 }
 .first_testimonial,.second_testimonial,.third_testimonial,.fourth_testimonial{
   margin-bottom: 20px;
@@ -80,6 +85,7 @@ body{
 }
 .img img{
   width: 32px;
+  height: 32px;
   border-radius: 50%;
   
   margin-right: 15px;
